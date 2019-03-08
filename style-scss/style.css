@@ -1,0 +1,30 @@
+.menu-parent {
+  position: absolute;
+  list-style: none;
+  background: orange;
+  width: 200px;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0; }
+  .menu-parent .menu-child span {
+    margin-left: 5px; }
+  .menu-parent .menu-child a {
+    color: #000; }
+    .menu-parent .menu-child a:hover {
+      text-decoration: none;
+      color: #ffffff; }
+    .menu-parent .menu-child a.home:after, .menu-parent .menu-child a.email:after, .menu-parent .menu-child a.docment:after {
+      content: '\f104';
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      float: right;
+      text-decoration: none; }
+
+.menu-hide {
+  width: 50px;
+  overflow: hidden; }
+  .menu-hide span {
+    display: none; }
+  .menu-hide a.home:after, .menu-hide a.email:after, .menu-hide a.docment:after {
+    display: none; }

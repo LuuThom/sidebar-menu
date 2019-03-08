@@ -1,0 +1,41 @@
+.menu-parent {
+    position: absolute;
+    list-style: none;
+    background: orange;
+    width: 200px;
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0;
+    .menu-child {
+        span {
+            margin-left: 5px;
+        }
+        a {
+            color: #000;
+            &:hover {
+                text-decoration: none;
+                color: #ffffff;
+            }
+            &.home:after,&.email:after,&.docment:after {
+                content: '\f104';
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+                float: right;
+                text-decoration: none; 
+            }
+        }
+    }
+}
+.menu-hide {
+    width: 50px;
+    overflow: hidden;
+    span {
+        display: none;
+    }
+    a {
+        &.home:after,&.email:after,&.docment:after {
+            display: none;
+        }
+    }
+}

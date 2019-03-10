@@ -1,30 +1,66 @@
-.menu-parent {
+.sidebar {
+  position: absolute;
+  height: 100%;
+  background: orange;
+  width: 230px;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 1s; }
+  .sidebar .sidebar-menu {
+    padding: 0; }
+    .sidebar .sidebar-menu .item {
+      list-style: none; }
+      .sidebar .sidebar-menu .item span {
+        margin-left: 5px; }
+      .sidebar .sidebar-menu .item a {
+        color: #000; }
+        .sidebar .sidebar-menu .item a:hover {
+          text-decoration: none;
+          color: #ffffff; }
+        .sidebar .sidebar-menu .item a.home:after, .sidebar .sidebar-menu .item a.email:after, .sidebar .sidebar-menu .item a.docment:after {
+          content: '\f104';
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          float: right;
+          text-decoration: none; }
+      .sidebar .sidebar-menu .item .dropdown_child {
+        display: none; }
+  .sidebar .path {
+    position: absolute;
+    bottom: 10px;
+    width: 175px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s;
+    left: 190px; }
+    .sidebar .path .left-show, .sidebar .path .right-hidden {
+      background: none;
+      border: none; }
+    .sidebar .path .left-show {
+      display: none; }
+
+.sidebar-hide {
   position: absolute;
   list-style: none;
   background: orange;
-  width: 200px;
-  height: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 0; }
-  .menu-parent .menu-child span {
-    margin-left: 5px; }
-  .menu-parent .menu-child a {
-    color: #000; }
-    .menu-parent .menu-child a:hover {
-      text-decoration: none;
-      color: #ffffff; }
-    .menu-parent .menu-child a.home:after, .menu-parent .menu-child a.email:after, .menu-parent .menu-child a.docment:after {
-      content: '\f104';
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-      float: right;
-      text-decoration: none; }
-
-.menu-hide {
   width: 50px;
   overflow: hidden; }
-  .menu-hide span {
-    display: none; }
-  .menu-hide a.home:after, .menu-hide a.email:after, .menu-hide a.docment:after {
-    display: none; }
+
+.main, .form-sign-in {
+  width: 75%;
+  position: absolute;
+  margin-left: 20%;
+  transition: all 1s; }
+
+.main-hide-sidebar, .form-hide-sidebar {
+  width: 90%;
+  margin-left: 7%;
+  margin-right: 5%;
+  transition: all 1s; }
+
+.open {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */

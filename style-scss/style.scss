@@ -1,41 +1,76 @@
-.menu-parent {
+.sidebar {
     position: absolute;
-    list-style: none;
-    background: orange;
-    width: 200px;
     height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin: 0;
-    .menu-child {
-        span {
-            margin-left: 5px;
-        }
-        a {
-            color: #000;
-            &:hover {
-                text-decoration: none;
-                color: #ffffff;
-            }
-            &.home:after,&.email:after,&.docment:after {
-                content: '\f104';
-                font-weight: 900;
-                font-family: "Font Awesome 5 Free";
-                float: right;
-                text-decoration: none; 
-            }
-        }
-    }
-}
-.menu-hide {
-    width: 50px;
+    background: orange;
+    width: 230px;
     overflow: hidden;
-    span {
-        display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 1s;
+    .sidebar-menu {
+        padding: 0;
+        .item {
+            list-style: none;
+            span {
+                margin-left: 5px;
+            }
+            a {
+                color: #000;
+                &:hover {
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+                &.home:after,&.email:after,&.docment:after {
+                    content: '\f104';
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                    float: right;
+                    text-decoration: none; 
+                }
+            }
+            .dropdown_child {
+                display: none;
+            }
+        }
     }
-    a {
-        &.home:after,&.email:after,&.docment:after {
+    .path {
+        position: absolute;
+        bottom: 10px;
+        width: 175px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        transition: all 1s;
+        left: 190px;
+        .left-show,.right-hidden {
+            background: none;
+            border: none;
+        }
+        .left-show {
             display: none;
         }
     }
+}
+
+.sidebar-hide {
+    position: absolute;
+    list-style: none;
+    background: orange;
+    width: 50px;
+    overflow: hidden;
+}
+.main,.form-sign-in {
+    width: 75%;
+    position: absolute;
+    margin-left: 20%;
+    transition: all 1s;
+}
+.main-hide-sidebar,.form-hide-sidebar {
+    width:90%;
+    margin-left: 7%;
+    margin-right: 5%;
+    transition: all 1s;
+}
+.open {
+    display: block;
 }
